@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from os.path import dirname
-import json
+from mainapp.models import ProductCategory, Product
 
 # Create your views here.
 
@@ -10,8 +9,21 @@ def index(request):
 
 
 def products(request):
-    context = dict()
-    with open(dirname(__file__) + '/fixtures/products.json') as c:
-        for item in json.load(c):
-            context.update(item)
+    context = {'title': 'geekshop | products',
+               'carousel_items': [
+                   {
+                       'image': 'vendor/img/slides/slide-1.jpg',
+                       'alt': 'First slide'
+                   },
+                   {
+                       'image': 'vendor/img/slides/slide-2.jpg',
+                       'alt': 'Second slide'
+                   },
+                   {
+                       'image': 'vendor/img/slides/slide-3.jpg',
+                       'alt': 'Third slide'
+                   }
+               ],
+               'categories': ProductCategory.objects.all().order_by('id'),
+               'products': Product.objects.all().order_by('id')}
     return render(request, 'mainapp/products.html', context)
