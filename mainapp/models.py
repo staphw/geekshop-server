@@ -21,3 +21,11 @@ class Product(models.Model):
 
     def __str__(self):
         return f'{self.name} | {self.category.name}'
+
+
+class Slide(models.Model):
+    image = models.ImageField(upload_to='slide_images', blank=True)
+    alt = models.CharField(max_length=32, blank=True)
+
+    def __str__(self):
+        return self.alt
