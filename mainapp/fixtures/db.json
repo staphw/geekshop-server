@@ -1,0 +1,807 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2021-09-20T07:45:00.023Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2021-09-20T08:16:47.634Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Product object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2021-09-20T08:17:23.241Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "Обувь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2021-09-20T08:17:28.846Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "Обувь",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2021-09-20T08:17:33.166Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "Подарки",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2021-09-20T08:18:32.609Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Product object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2021-09-20T08:19:14.298Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Product object (3)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2021-09-20T08:19:49.860Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Product object (4)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2021-09-20T08:20:21.619Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Product object (5)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2021-09-20T08:20:52.401Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "Product object (6)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2021-09-20T08:21:03.250Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Product object (2)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Quantity\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2021-09-20T08:35:41.543Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "Темно-синие широкие строгие брюки ASOS DESIGN | Одежда",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2021-09-20T08:36:24.986Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex | Обувь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2021-09-20T08:36:29.521Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex | Обувь",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2021-09-20T08:36:42.178Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Черный рюкзак Nike Heritage | Аксессуары",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2021-09-20T08:36:58.573Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Коричневый спортивный oversized-топ ASOS DESIGN | Одежда",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2021-09-20T08:37:11.771Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Синяя куртка The North Face | Одежда",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2021-09-20T08:37:25.371Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Худи черного цвета с монограммами adidas Originals | Одежда",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2021-09-21T07:54:26.655Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "administrator",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add product category",
+      "content_type": 7,
+      "codename": "add_productcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change product category",
+      "content_type": 7,
+      "codename": "change_productcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete product category",
+      "content_type": 7,
+      "codename": "delete_productcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view product category",
+      "content_type": 7,
+      "codename": "view_productcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 8,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 8,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 8,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view product",
+      "content_type": 8,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add slide",
+      "content_type": 9,
+      "codename": "add_slide"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change slide",
+      "content_type": 9,
+      "codename": "change_slide"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete slide",
+      "content_type": 9,
+      "codename": "delete_slide"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view slide",
+      "content_type": 9,
+      "codename": "view_slide"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$kEEzr97k8gNgeQhZtz2Ke6$y51VQOyltOwZdJfos4YbXyV0IvP45n/eAyWks/qKeq8=",
+      "last_login": "2021-09-20T07:44:20Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-09-20T07:34:23Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "mainapp",
+      "model": "productcategory"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "mainapp",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "mainapp",
+      "model": "slide"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "48djp6m8btxmom883d8x69ul7pvg88qy",
+    "fields": {
+      "session_data": ".eJxVjMEOwiAQRP-FsyHANggevfsNZJddpGpoUtqT8d9tkx70NMm8N_NWCdelprXLnEZWF2XV6bcjzE9pO-AHtvuk89SWeSS9K_qgXd8mltf1cP8OKva6rYMPZkABF9kiBGHOzhofM0QAz64QONjCsKVYDBV_LkgYogwOAVF9vt1uOFI:1mSDyO:eNqcc9phtfMuayMRyv4JCB8deH1OBIeFpFsHofgF9Ts",
+      "expire_date": "2021-10-04T07:44:20.053Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 16,
+    "fields": {
+      "name": "Новинки",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 17,
+    "fields": {
+      "name": "Одежда",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 18,
+    "fields": {
+      "name": "Обувь",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 19,
+    "fields": {
+      "name": "Аксессуары",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 20,
+    "fields": {
+      "name": "Подарки",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 19,
+    "fields": {
+      "name": "Худи черного цвета с монограммами adidas Originals",
+      "image": "product_images/Adidas-hoodie.png",
+      "description": "Мягкая ткань для свитшотов. Стиль и комфорт – это образ жизни",
+      "price": "6090.00",
+      "quantity": 0,
+      "category": 17
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 20,
+    "fields": {
+      "name": "Синяя куртка The North Face",
+      "image": "product_images/Blue-jacket-The-North-Face.png",
+      "description": "Гладкая ткань. Водонепроницаемое покрытие. Легкий и теплый пуховый наполнитель.",
+      "price": "23725.00",
+      "quantity": 1,
+      "category": 17
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 21,
+    "fields": {
+      "name": "Коричневый спортивный oversized-топ ASOS DESIGN",
+      "image": "product_images/Brown-sports-oversized-top-ASOS-DESIGN.png",
+      "description": "Материал с плюшевой текстурой. Удобный и мягкий.",
+      "price": "3390.00",
+      "quantity": 0,
+      "category": 17
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 22,
+    "fields": {
+      "name": "Черный рюкзак Nike Heritage",
+      "image": "product_images/Black-Nike-Heritage-backpack.png",
+      "description": "Плотная ткань. Легкий материал.",
+      "price": "2340.00",
+      "quantity": 0,
+      "category": 19
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 23,
+    "fields": {
+      "name": "Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex",
+      "image": "product_images/Black-Dr-Martens-shoes.png",
+      "description": "Гладкий кожаный верх. Натуральный материал.",
+      "price": "13590.00",
+      "quantity": 0,
+      "category": 18
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 24,
+    "fields": {
+      "name": "Темно-синие широкие строгие брюки ASOS DESIGN",
+      "image": "product_images/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png",
+      "description": "Легкая эластичная ткань сирсакер Фактурная ткань.",
+      "price": "2890.00",
+      "quantity": 0,
+      "category": 17
+    }
+  },
+  {
+    "model": "mainapp.slide",
+    "pk": 4,
+    "fields": {
+      "image": "slide_images/slide-1.jpg",
+      "alt": "First slide"
+    }
+  },
+  {
+    "model": "mainapp.slide",
+    "pk": 5,
+    "fields": {
+      "image": "slide_images/slide-2.jpg",
+      "alt": "Second slide"
+    }
+  },
+  {
+    "model": "mainapp.slide",
+    "pk": 6,
+    "fields": {
+      "image": "slide_images/slide-3.jpg",
+      "alt": "Third slide"
+    }
+  }
+]
