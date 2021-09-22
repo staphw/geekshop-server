@@ -14,4 +14,4 @@ def register(request):
     context = {
         'title': 'geekshop | регистрация'
     }
-    return render(request, 'register/login.html', context)
+    return render(request, 'users/register.html', context)
