@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 from mainapp.models import ProductCategory, Product, Slide
 
 import json, os
@@ -44,4 +44,4 @@ class Command(BaseCommand):
             new_slide = Slide(**sl)
             new_slide.save()
 
-    # super_user = User.objects.create_superuser('administrator', '', 'adm')
+    super_user = User.objects.create_superuser('admin', '', 'admin')
