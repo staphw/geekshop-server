@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from mainapp.models import ProductCategory, Product, Slide
 
 import json, os
@@ -14,28 +14,34 @@ def load_from_json(file_name):
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        data_json = load_from_json('data')
+        categories = load_from_json('productcategory')
 
-        for item in data_json:
-            if item.get('categories'):
-                ProductCategory.objects.all().delete()
-                for category in item.get('categories'):
-                    new_category = ProductCategory(**category)
-                    new_category.save()
+        ProductCategory.objects.all().delete()
+        for category in categories:
+            cat = category.get('fields')
+            cat['id'] = category.get('pk')
+            new_category = ProductCategory(**cat)
+            new_category.save()
 
-            if item.get('products'):
-                Product.objects.all().delete()
-                for product in item.get('products'):
-                    category_name = product['category']
-                    category = ProductCategory.objects.get(name=category_name)
-                    product['category'] = category
-                    new_product = Product(**product)
-                    new_product.save()
+        products = load_from_json('product')
 
-            if item.get('slides'):
-                Slide.objects.all().delete()
-                for slide in item.get('slides'):
-                    new_slide = Slide(**slide)
-                    new_slide.save()
+        Product.objects.all().delete()
+        for product in products:
+            prod = product.get('fields')
+            prod['id'] = product.get('pk')
+            category_id = prod.get('category')
+            category = ProductCategory.objects.get(id=category_id)
+            prod['category'] = category
+            new_product = Product(**prod)
+            new_product.save()
 
-        # super_user = User.objects.create_superuser('administrator', '', 'adm')
+        slides = load_from_json('slide')
+
+        Slide.objects.all().delete()
+        for slide in slides:
+            sl = slide.get('fields')
+            sl['id'] = slide.get('pk')
+            new_slide = Slide(**sl)
+            new_slide.save()
+
+    # super_user = User.objects.create_superuser('administrator', '', 'adm')
