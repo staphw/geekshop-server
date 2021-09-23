@@ -1,0 +1,26 @@
+[
+  {
+    "model": "mainapp.slide",
+    "pk": 1,
+    "fields": {
+      "image": "slide_images/slide-1.jpg",
+      "alt": "First slide"
+    }
+  },
+  {
+    "model": "mainapp.slide",
+    "pk": 2,
+    "fields": {
+      "image": "slide_images/slide-2.jpg",
+      "alt": "Second slide"
+    }
+  },
+  {
+    "model": "mainapp.slide",
+    "pk": 3,
+    "fields": {
+      "image": "slide_images/slide-3.jpg",
+      "alt": "Third slide"
+    }
+  }
+]
