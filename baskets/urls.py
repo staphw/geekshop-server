@@ -17,7 +17,7 @@ from django.urls import path
 # from .views import login, register, logout, profile
 
 
-app_name = 'basket'
+app_name = 'baskets'
 urlpatterns = [
     # path('login/', login, name='login'),
     # path('register/', register, name='register'),
