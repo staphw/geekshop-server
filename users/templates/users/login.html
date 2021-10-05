@@ -7,10 +7,7 @@
             {% if form.errors %}
                 <div class="alert alert-warning alert-dismissible fade show" role="alert"
                      style="margin-top: 50px;">
-                    {% for error in form.non_feild_errors %}
-                        {{ error }}
-                    {% endfor %}
-                    {#                <strong>Holy guacamole!</strong> You should check in on some of those fields below.#}
+                        {{ form.non_field_errors }}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
