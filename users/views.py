@@ -5,6 +5,7 @@ from django.urls import reverse
 # Create your views here.
 from baskets.models import Basket
 from users.forms import UserLoginForm, UserRegisterForm, UserProfileForm
+from django.contrib.auth.decorators import login_required
 
 
 def login(request):
@@ -44,6 +45,7 @@ def register(request):
     return render(request, 'users/register.html', context)
 
 
+@login_required
 def profile(request):
     if request.method == 'POST':
         form = UserProfileForm(data=request.POST, instance=request.user, files=request.FILES)

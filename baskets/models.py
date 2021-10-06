@@ -13,3 +13,20 @@ class Basket(models.Model):
 
     def __str__(self):
         return f'Корзина для {self.user.username} | Продукт {self.product.name}'
+
+    def sum(self):
+        return self.product.price * self.quantity
+
+    def total_quantity(self):
+        baskets = Basket.objects.filter(user=self.user)
+        total_quantity = 0
+        for basket in baskets:
+            total_quantity += basket.quantity
+        return total_quantity
+
+    def total_sum(self):
+        baskets = Basket.objects.filter(user=self.user)
+        total_sum = 0
+        for basket in baskets:
+            total_sum += basket.sum()
+        return total_sum
