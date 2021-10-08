@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('mainapp', '0004_slide'),
+        ('mainapp', '0003_product'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 

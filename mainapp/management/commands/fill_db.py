@@ -35,13 +35,4 @@ class Command(BaseCommand):
             new_product = Product(**prod)
             new_product.save()
 
-        slides = load_from_json('slide')
-
-        Slide.objects.all().delete()
-        for slide in slides:
-            sl = slide.get('fields')
-            sl['id'] = slide.get('pk')
-            new_slide = Slide(**sl)
-            new_slide.save()
-
     super_user = User.objects.create_superuser('admin', '', 'admin')
