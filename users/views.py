@@ -51,13 +51,14 @@ def profile(request):
         form = UserProfileForm(data=request.POST, instance=request.user, files=request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Успешно изменено!')
             return HttpResponseRedirect(reverse('users:profile'))
-        else:
-            print(form.errors)
+    else:
+        form = UserProfileForm(instance=request.user)
 
     context = {
         'title': 'geekshop | профиль',
-        'form': UserProfileForm(instance=request.user),
+        'form': form,
         'baskets': Basket.objects.filter(user=request.user)
     }
     return render(request, 'users/profile.html', context)
