@@ -57,14 +57,14 @@ class UserProfileForm(UserChangeForm):
             field.widget.attrs['class'] = 'form-control py-4'
         self.fields['image'].widget.attrs['class'] = 'custom-file-input'
 
-    def clean_image(self):
-        data = self.cleaned_data['image']
-        if data and data.size > 1048576:
-            raise forms.ValidationError('Файл слишком большой!')
-        return data
-
-    def clean_first_name(self):
-        data = self.cleaned_data['first_name']
-        if not data.isalpha():
-            raise forms.ValidationError('В имени должны быть только буквы!')
-        return data
+    # def clean_image(self):
+    #     data = self.cleaned_data['image']
+    #     if data and data.size > 1048576:
+    #         raise forms.ValidationError('Файл слишком большой!')
+    #     return data
+    #
+    # def clean_first_name(self):
+    #     data = self.cleaned_data['first_name']
+    #     if not data.isalpha():
+    #         raise forms.ValidationError('В имени должны быть только буквы!')
+    #     return data

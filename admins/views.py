@@ -1,10 +1,11 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
-from admins.forms import UserAdminRegisterForm
+from admins.forms import UserAdminRegisterForm, UserAdminProfileForm
 from users.models import User
 
 
@@ -19,7 +20,7 @@ class UserListView(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['titel'] = 'admin | users'
+        context['title'] = 'admin | users'
         return context
 
 
@@ -31,13 +32,29 @@ class UserCreateView(CreateView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['titel'] = 'admin | create user'
+        context['title'] = 'admin | create user'
         return context
 
 
 class UserUpdateView(UpdateView):
-    pass
+    model = User
+    template_name = 'admins/admin-users-update-delete.html'
+    form_class = UserAdminProfileForm
+    success_url = reverse_lazy('admins:admins_user')
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'admin | update user'
+        return context
 
 
 class UserDeleteView(DeleteView):
-    pass
+    model = User
+    template_name = 'admins/admin-users-read.html'
+    success_url = reverse_lazy('admins:admins_user')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.is_active = False
+        self.object.save()
+        return HttpResponseRedirect(self.get_success_url())
