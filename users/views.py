@@ -55,7 +55,7 @@ class ProfileFormView(UpdateView, BaseClassContextMixin):
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        context= super().get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['baskets'] = Basket.objects.filter(user=self.request.user)
         return context
 
