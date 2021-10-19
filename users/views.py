@@ -92,6 +92,7 @@ def verify(request, email, activation_key):
             user.activation_key = ''
             user.activation_key_created = None
             user.is_active = True
+            user.save()
             auth.login(request, user)
         return render(request, 'users/verification.html')
     except Exception as e:

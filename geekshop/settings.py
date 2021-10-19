@@ -156,4 +156,4 @@ EMAIL_USE_SSL = True if os.getenv('EMAIL_USE_SSL') == 'True' else False
 # EMAIL_FILE_PATH = 'tmp/emails'
 
 EMAIL_HOST_USER, EMAIL_HOST_PASSWORD = None, None
-# python - smtpd -n -c DebuggingServer localhost:25
+# sudo python3 -m smtpd -n -c DebuggingServer localhost:25
