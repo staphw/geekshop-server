@@ -1,13 +1,36 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from django.shortcuts import HttpResponseRedirect
 from django.template.loader import render_to_string
+from django.utils.decorators import method_decorator
+from django.views.generic import CreateView, DeleteView
 
+from geekshop.mixin import BaseClassContextMixin
 from mainapp.models import Product
 from baskets.models import Basket
 # Create your views here.
+
+
+# class BasketAddCreateView(CreateView):
+#     model = Basket
+#
+#     def get(self, request, *args, **kwargs):
+#         user_select = request.user
+#         product = Product.objects.get(id=kwargs['product_id'])
+#         baskets = Basket.objects.filter(user=user_select, product=product)
+#         if not baskets.exists():
+#             Basket.objects.create(user=user_select, product=product, quantity=1)
+#         else:
+#             basket = baskets.first()
+#             basket.quantity += 1
+#             basket.save()
+#         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+#
+#     @method_decorator(user_passes_test(lambda u: u.is_authenticated))
+#     def dispatch(self, request, *args, **kwargs):
+#         return super().dispatch(request, *args, **kwargs)
 
 
 @login_required
