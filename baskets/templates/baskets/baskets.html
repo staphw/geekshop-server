@@ -1,4 +1,4 @@
-{#{% load method %}#}
+{% load method %}
 
 <div class="basket_list">
     {% if baskets %}
@@ -35,7 +35,7 @@
                 <div class="card mb-3">
                     <div class="card-footer">
                         <p class="float-left">Итого</p>
-{#                        <h4 class="float-right">{{ variable|total_sum:user  }} руб.</h4>#}
+{#                        <h4 class="float-right">{{ variable|total_sum:user }} руб.</h4>#}
                         <h4 class="float-right">{{ basket.total_sum }} руб.</h4>
                     </div>
                 </div>
