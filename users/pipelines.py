@@ -13,16 +13,16 @@ def save_user_profile(backend, user, response, *args, **kwargs):
         return
     
     api_url = urlunparse((
-        'http', 'api.vk.com', 'method/users/get', None,
+        'http', 'api.vk.com', '/method/users.get', None,
         urlencode(
-            OrderedDict(fields=','.joni(('bdate', 'sex', 'about')),
+            OrderedDict(fields=','.join(('bdate', 'sex', 'about')),
                         access_token=response['access_token'],
                         v=5.131)
         ), None
     ))
 
     resp = requests.get(api_url)
-    if resp.status != 200:
+    if resp.status_code != 200:
         return
 
     data = resp.json()['response'][0]
@@ -36,7 +36,7 @@ def save_user_profile(backend, user, response, *args, **kwargs):
     if data['about']:
         user.userprofile.about = data['about']
 
-    bdate = datetime.strptime(data['bdate'],' %d.%m.%Y').date()
+    bdate = datetime.strptime(data['bdate'], '%d.%m.%Y').date()
     age = timezone.now().date().year-bdate.year
     user.age = age
     if age < 18:
