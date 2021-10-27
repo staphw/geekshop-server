@@ -14,7 +14,7 @@ class OrderForm(forms.ModelForm):
             field.widget.attrs['class'] = 'form-control'
 
 
-class OrderItemsForm:
+class OrderItemsForm(forms.ModelForm):
     price = forms.CharField(label='цена', required=False)
 
     class Meta:
@@ -22,6 +22,6 @@ class OrderItemsForm:
         exclude = ()
 
     def __int__(self, *args, **kwargs):
-        super(OrderItemsForm, self).__int__(*args, **kwargs)
+        super(OrderItemsForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'

@@ -48,15 +48,13 @@
                     <li class="nav-item">
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">
-                                {{ user.username|defasult:'Пользователь' }}
+                                {{ user.username|default:'Пользователь' }}
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="nav-link text-dark" href="{% url 'users:profile' %}">Профиль</a>
                                 </li>
-                            </ul>
-                            <ul class="dropdown-menu">
                                 <li>
                                     <a class="nav-link text-dark" href="{% url 'orders:list' %}">Заказы</a>
                                 </li>

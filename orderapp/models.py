@@ -39,8 +39,8 @@ class Order(models.Model):
         items = self.orderitems.select_related()
         return sum(list(map(lambda x: x.get_product_cost(), items)))
 
-    def get_items(self):
-        pass
+    # def get_items(self):
+    #     pass
 
     def delete(self, using=None, keep_parents=False):
         for item in self.orderitems.select_related():
