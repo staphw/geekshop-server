@@ -14,7 +14,7 @@ class Order(models.Model):
     CANCEL = 'CNC'
 
     ORDER_STATUS_CHOISES = (
-        (FORMING, 'формируетя'),
+        (FORMING, 'формируетcя'),
         (SEND_TO_PROCEED, 'отправлен в обработку'),
         (PAID, 'оплачено'),
         (PROCEEDED, 'обрабатывается'),
@@ -25,7 +25,7 @@ class Order(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created = models.DateTimeField(verbose_name='создан', auto_now_add=True)
     update = models.DateTimeField(verbose_name='обновлен', auto_now=True)
-    status = models.CharField(choices='', verbose_name='статус', max_length=3, default=FORMING)
+    status = models.CharField(choices=ORDER_STATUS_CHOISES, verbose_name='статус', max_length=3, default=FORMING)
     is_active = models.BooleanField(verbose_name='активный', default=True)
 
     def __str__(self):

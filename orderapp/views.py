@@ -1,9 +1,10 @@
 from django.db import transaction
 from django.forms import inlineformset_factory
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 
 from baskets.models import Basket
@@ -26,7 +27,7 @@ class OrderCreate(CreateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'geekshop | update order'
+        context['title'] = 'geekshop | create order'
 
         OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemsForm, extra=1)
 
@@ -50,7 +51,6 @@ class OrderCreate(CreateView):
         return context
 
     def form_valid(self, form):
-
         context = self.get_context_data()
         orderitems = context['orderitems']
 
@@ -70,11 +70,11 @@ class OrderCreate(CreateView):
 class OrderUpdate(UpdateView):
     model = Order
     fields = []
-    success_url = reverse_lazy('orders:update')
+    success_url = reverse_lazy('orders:list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'geekshop | create order'
+        context['title'] = 'geekshop | update order'
 
         OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemsForm, extra=1)
 
@@ -121,3 +121,4 @@ def order_forming_complete(request, pk):
     order.status = Order.SEND_TO_PROCEED
     order.save()
 
+    return HttpResponseRedirect(reverse('orders:list'))
