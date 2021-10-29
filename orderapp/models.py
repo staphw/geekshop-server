@@ -74,7 +74,6 @@ def product_quantity_update_delete(sender, instance, **kwargs):
     instance.save()
 
 
-
 @receiver(pre_save, sender=Basket)
 @receiver(pre_save, sender=OrderItem)
 def product_quantity_update_save(sender, instance, **kwargs):
